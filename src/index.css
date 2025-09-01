@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid gray;
+  /* or any light color */
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 968px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  .todo-card {
+    width: 95% !important;
+  }
+
+  div[style*="Add Todo"] {
+    font-size: 14px !important;
+    min-width: 90px !important;
+    height: 38px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  div[style*="Add Todo"] {
+    font-size: 13px !important;
+    min-width: 80px !important;
+    height: 35px !important;
+    padding: 0 5px !important;
+  }
+}
