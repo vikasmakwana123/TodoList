@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Header from '../public/Header'
-import TodoList from '../public/TodoList'
+import Header from './components/Header'
+import TodoList from './components/TodoList'
 import AddTodo from '../public/AddTodo'
 
 const App = () => {

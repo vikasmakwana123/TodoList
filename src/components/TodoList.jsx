@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import DownIcon from "../assets/Down.svg";
+import UpIcon from "../assets/Up.svg";
+
 
 const TodoList = (props) => {
   const [button, setButton] = useState(false)
@@ -40,15 +43,31 @@ const TodoList = (props) => {
             }}
           />
           <h3
-            style={{margin: 0,fontSize: '18px',fontWeight: '600',color: props.isChecked ? '#6b7280' : '#111827',textDecoration: props.isChecked ? 'line-through' : 'none',transition: 'color 0.3s ease',
+            style={{
+              margin: 0,
+              fontSize: '18px',
+              fontWeight: '600',
+              color: props.isChecked ? '#6b7280' : '#111827',
+              textDecoration: props.isChecked ? 'line-through' : 'none',
+              transition: 'color 0.3s ease',
             }}
-          >{props.title}</h3>
+          >
+            {props.title}
+          </h3>
         </div>
-        <div onClick={buttonClicked} style={{cursor: 'pointer',padding: '6px',borderRadius: '50%',transition: 'background 0.2s ease',}}
-        >{!button ? (
-            <img src="./public/Down.svg" style={{ width: '20px', height: '20px' }} />
+        <div
+          onClick={buttonClicked}
+          style={{
+            cursor: 'pointer',
+            padding: '6px',
+            borderRadius: '50%',
+            transition: 'background 0.2s ease',
+          }}
+        >
+          {!button ? (
+            <img src={DownIcon} style={{ width: '20px', height: '20px' }} />
           ) : (
-            <img src="./public/Up.svg" style={{ width: '20px', height: '20px' }} />
+            <img src={UpIcon} style={{ width: '20px', height: '20px' }} />
           )}
         </div>
       </div>
