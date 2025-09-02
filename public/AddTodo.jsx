@@ -6,6 +6,7 @@ const AddTodo = ({ onAddTodo }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    alert('Todo Added Successfully!')
     if (!title.trim() || !desc.trim()) {
       alert('Both Title and Description are required!')
       return
